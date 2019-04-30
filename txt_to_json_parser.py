@@ -23,26 +23,22 @@
         # listen for blank line to denote end of stanza
             # if two blank lines, poem has ended
 
-with open('txt_to_json.txt') as file:
-    file_contents = file.read()
-    # print(file_contents)
+## General structure
+# read title
+    # new poem JSON
+# newline
+# stanza
+# newline
+# newline
+# title
+# .
+# .
+# .
 
-    #for each line read : check_for_poem_end()
+# https://stackabuse.com/read-a-file-line-by-line-in-python/
 
-
-def check_for_poem_end():
-    if line == '\n' & line+1 == '\n':
-        return True
-
-
-    # read title
-        # new poem JSON
-        #
-    # newline
-    # stanza
-    # newline
-    # newline
-    # title
-    # .
-    # .
-    # .
+filepath = 'poem_text.txt'
+with open(filepath) as fp:
+    for count, line in enumerate(fp):
+        print(line)
+# No need to close fp since using 'with'
